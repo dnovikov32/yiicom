@@ -1,7 +1,11 @@
 {
   "name": "yiicom/yii-commerce",
   "description": "Yii Commerce common bundle",
+  "keywords": ["yii2", "commerce"],
+  "type": "composer-plugin",
   "require": {
+    "php": ">=7.1.0",
+    "ext-mbstring": "*",
     "yiisoft/yii2": "^2.0.26",
     "yiisoft/yii2-debug": "^2.0.0",
     "yiisoft/yii2-bootstrap4": "^2.0.0",
@@ -16,5 +20,8 @@
     "kartik-v/yii2-grid":"^3.0.0",
     "mihaildev/yii2-elfinder": "^1.3.0",
     "rmrevin/yii2-fontawesome": "^3.1"
+  },
+  "autoload": {
+    "psr-4": { "yii\\commerce\\": "src" }
   }
 }
