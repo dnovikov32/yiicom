@@ -2,8 +2,7 @@
   "name": "yiicom/yii-commerce",
   "description": "Yii Commerce common bundle",
   "require": {
-    "php": ">=7.1.0",
-    "yiisoft/yii2": "dev-master",
+    "yiisoft/yii2": "^2.0.26",
     "yiisoft/yii2-debug": "^2.0.0",
     "yiisoft/yii2-bootstrap4": "^2.0.0",
     "yiisoft/yii2-swiftmailer": "2.0.7",
