@@ -3,8 +3,6 @@
   "description": "Yii Commerce common bundle",
   "require": {
     "php": ">=7.1.0",
-    "ext-mbstring": "*",
-    "vlucas/phpdotenv": "^2.0",
     "yiisoft/yii2": "dev-master",
     "yiisoft/yii2-debug": "^2.0.0",
     "yiisoft/yii2-bootstrap4": "^2.0.0",
