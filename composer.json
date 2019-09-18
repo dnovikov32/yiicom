@@ -2,7 +2,7 @@
   "name": "yiicom/yii-commerce",
   "description": "Yii Commerce common bundle",
   "keywords": ["yii2", "commerce"],
-  "type": "composer-plugin",
+  "type": "yii2-extension",
   "require": {
     "php": ">=7.1.0",
     "ext-mbstring": "*",
@@ -22,6 +22,6 @@
     "rmrevin/yii2-fontawesome": "^3.1"
   },
   "autoload": {
-    "psr-4": { "yii\\commerce\\": "src" }
+    "psr-4": { "yiicom\\commerce\\": "src" }
   }
 }
