@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\commerce\common\interfaces;
+namespace yiicom\commerce\common\interfaces;
 
 interface ModelStatus
 {

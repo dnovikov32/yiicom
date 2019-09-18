@@ -2,7 +2,7 @@
 
 use yii\web\View;
 use yii\helpers\Html;
-use modules\commerce\backend\assets\CommerceAsset;
+use yiicom\commerce\backend\assets\CommerceAsset;
 use modules\pages\backend\assets\CommercePagesAsset;
 use modules\files\backend\assets\CommerceFilesAsset;
 use modules\catalog\backend\assets\CommerceCatalogAsset;

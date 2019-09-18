@@ -1,10 +1,10 @@
 <?php
 
-namespace modules\commerce\backend\base;
+namespace yiicom\commerce\backend\base;
 
 use yii\filters\AccessControl;
 
-class Controller extends \modules\commerce\common\base\Controller
+class Controller extends \yiicom\commerce\common\base\Controller
 {
 	public function init()
 	{

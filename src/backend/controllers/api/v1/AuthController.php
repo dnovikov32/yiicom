@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\commerce\backend\controllers\api\v1;
+namespace yiicom\commerce\backend\controllers\api\v1;
 
 use Yii;
 use yii\rest\Controller;
@@ -8,8 +8,8 @@ use yii\base\Exception;
 use yii\base\InvalidConfigException;
 use yii\web\ServerErrorHttpException;
 use yii\web\UnauthorizedHttpException;
-use modules\commerce\backend\forms\LoginForm;
-use modules\commerce\backend\models\AdminUser;
+use yiicom\commerce\backend\forms\LoginForm;
+use yiicom\commerce\backend\models\AdminUser;
 
 class AuthController extends Controller
 {

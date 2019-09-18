@@ -1,9 +1,9 @@
 <?php
 
-namespace modules\commerce\common\traits;
+namespace yiicom\commerce\common\traits;
 
 use Yii;
-use modules\commerce\common\interfaces\ModelStatus;
+use yiicom\commerce\common\interfaces\ModelStatus;
 
 /**
  * @property integer $status

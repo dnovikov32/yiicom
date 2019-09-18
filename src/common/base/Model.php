@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\commerce\common\base;
+namespace yiicom\commerce\common\base;
 
 class Model extends \yii\base\Model
 {

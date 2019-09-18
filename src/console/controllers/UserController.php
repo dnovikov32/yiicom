@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\commerce\console\controllers;
+namespace yiicom\commerce\console\controllers;
 
 use Yii;
 use yii\helpers\Console;
@@ -8,7 +8,7 @@ use yii\console\ExitCode;
 use yii\console\Controller;
 use yii\base\Exception;
 use yii\base\InvalidConfigException;
-use modules\commerce\backend\models\AdminUser;
+use yiicom\commerce\backend\models\AdminUser;
 
 class UserController extends Controller
 {

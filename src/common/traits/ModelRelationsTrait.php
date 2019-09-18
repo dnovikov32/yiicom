@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\commerce\common\traits;
+namespace yiicom\commerce\common\traits;
 
 use yii\base\Model;
 use yii\helpers\ArrayHelper;

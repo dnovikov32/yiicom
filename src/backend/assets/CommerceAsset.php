@@ -1,13 +1,13 @@
 <?php
 
-namespace modules\commerce\backend\assets;
+namespace yiicom\commerce\backend\assets;
 
 use yii\web\AssetBundle;
 use yii\web\YiiAsset;
 use yii\bootstrap4\BootstrapAsset;
 use yii\bootstrap4\BootstrapPluginAsset;
 use rmrevin\yii\fontawesome\AssetBundle as FontawesomeAsset;
-use modules\commerce\backend\assets\ckeditor\CKEditorAsset;
+use yiicom\commerce\backend\assets\ckeditor\CKEditorAsset;
 
 /**
  * @inheritdoc

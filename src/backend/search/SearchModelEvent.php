@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\commerce\backend\search;
+namespace yiicom\commerce\backend\search;
 
 use yii\base\Event;
 use yii\data\DataProviderInterface;

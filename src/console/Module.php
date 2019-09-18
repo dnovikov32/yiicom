@@ -1,9 +1,9 @@
 <?php
 
-namespace modules\commerce\console;
+namespace yiicom\commerce\console;
 
 
-class Module extends \modules\commerce\common\Module
+class Module extends \yiicom\commerce\common\Module
 {
   
 }

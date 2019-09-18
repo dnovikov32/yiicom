@@ -1,11 +1,11 @@
 <?php
 
-namespace modules\commerce\backend\forms;
+namespace yiicom\commerce\backend\forms;
 
 use yii\base\Model;
 use yii\base\Exception;
 use yii\base\InvalidConfigException;
-use modules\commerce\backend\models\AdminUser;
+use yiicom\commerce\backend\models\AdminUser;
 
 /**
  * @property string $login

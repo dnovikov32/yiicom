@@ -1,8 +1,8 @@
 <?php
 
-namespace modules\commerce\backend\base;
+namespace yiicom\commerce\backend\base;
 
-class Model extends \modules\commerce\common\base\Model
+class Model extends \yiicom\commerce\common\base\Model
 {
 	/**
 	 * Сортирует и добавляеи новые модели в соответствии с позициями в форме

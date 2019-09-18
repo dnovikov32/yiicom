@@ -1,13 +1,13 @@
 <?php
 
-namespace modules\commerce\common\models;
+namespace yiicom\commerce\common\models;
 
-use modules\commerce\common\interfaces\ModelList;
-use modules\commerce\common\interfaces\ModelStatus;
-use modules\commerce\common\interfaces\ModelRelations;
-use modules\commerce\common\traits\ModelListTrait;
-use modules\commerce\common\traits\ModelStatusTrait;
-use modules\commerce\common\traits\ModelRelationsTrait;
+use yiicom\commerce\common\interfaces\ModelList;
+use yiicom\commerce\common\interfaces\ModelStatus;
+use yiicom\commerce\common\interfaces\ModelRelations;
+use yiicom\commerce\common\traits\ModelListTrait;
+use yiicom\commerce\common\traits\ModelStatusTrait;
+use yiicom\commerce\common\traits\ModelRelationsTrait;
 
 /**
  * @inheritdoc

@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace modules\commerce\backend\grid;
+namespace yiicom\commerce\backend\grid;
 
 use Yii;
 use yii\helpers\Html;

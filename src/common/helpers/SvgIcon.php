@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\commerce\common\helpers;
+namespace yiicom\commerce\common\helpers;
 
 use yii\helpers\Html;
 

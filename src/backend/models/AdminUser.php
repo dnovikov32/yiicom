@@ -1,14 +1,14 @@
 <?php
 
-namespace modules\commerce\backend\models;
+namespace yiicom\commerce\backend\models;
 
 use Yii;
 use yii\db\Expression;
 use yii\behaviors\TimestampBehavior;
 use yii\base\NotSupportedException;
 use yii\web\IdentityInterface;
-use modules\commerce\common\interfaces\ModelStatus;
-use modules\commerce\common\traits\ModelStatusTrait;
+use yiicom\commerce\common\interfaces\ModelStatus;
+use yiicom\commerce\common\traits\ModelStatusTrait;
 
 /**
  * @property integer $id

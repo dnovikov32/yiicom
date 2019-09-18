@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\commerce\backend\base;
+namespace yiicom\commerce\backend\base;
 
 use yii\rest\Controller;
 use yii\filters\VerbFilter;

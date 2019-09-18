@@ -1,11 +1,11 @@
 <?php
 
-namespace modules\commerce\backend\widgets;
+namespace yiicom\commerce\backend\widgets;
 
 use Yii;
 use yii\base\Widget;
 use yii\bootstrap4\Html;
-use modules\commerce\common\Module;
+use yiicom\commerce\common\Module;
 
 /**
  * Admin modules menu

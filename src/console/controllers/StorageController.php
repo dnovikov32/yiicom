@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\commerce\console\controllers;
+namespace yiicom\commerce\console\controllers;
 
 use Yii;
 use yii\helpers\Console;

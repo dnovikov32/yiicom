@@ -1,6 +1,6 @@
 <?php
 
-namespace modules\commerce\backend\models;
+namespace yiicom\commerce\backend\models;
 
 use yii\db\ActiveQuery;
 
