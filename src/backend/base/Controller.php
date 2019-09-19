@@ -8,7 +8,7 @@ class Controller extends \yiicom\commerce\common\base\Controller
 {
 	public function init()
 	{
-		$this->layout = '@modules/commerce/backend/views/layouts/main';
+		$this->layout = '@yiicom/commerce/backend/views/layouts/main';
 	}
 
 //	public function behaviors()

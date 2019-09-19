@@ -6,7 +6,6 @@ use yii\web\AssetBundle;
 use yii\web\YiiAsset;
 use yii\bootstrap4\BootstrapAsset;
 use yii\bootstrap4\BootstrapPluginAsset;
-use rmrevin\yii\fontawesome\AssetBundle as FontawesomeAsset;
 use yiicom\commerce\backend\assets\ckeditor\CKEditorAsset;
 
 /**
@@ -14,7 +13,7 @@ use yiicom\commerce\backend\assets\ckeditor\CKEditorAsset;
  */
 class CommerceAsset extends AssetBundle
 {
-    public $sourcePath = '@modules/commerce/backend/assets/dist';
+    public $sourcePath = '@vendor/yiicom/yii-commerce/src/backend/assets/dist';
 
     public $css = [
 		'css/commerce.css',
@@ -28,8 +27,6 @@ class CommerceAsset extends AssetBundle
         YiiAsset::class,
         BootstrapAsset::class,
         BootstrapPluginAsset::class,
-        FontawesomeAsset::class,
-        VueAsset::class,
-        CKEditorAsset::class,
+//        CKEditorAsset::class,
     ];
 }
