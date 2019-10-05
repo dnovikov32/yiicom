@@ -1,6 +1,6 @@
 <?php
 
-use yii\web\View;
+use Viewyii\web\View;
 use yii\helpers\Html;
 use yiicom\commerce\backend\assets\CommerceAsset;
 //use modules\pages\backend\assets\CommercePagesAsset;
