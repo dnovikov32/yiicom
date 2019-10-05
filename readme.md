@@ -1,6 +1,15 @@
-# yii-commerce
-Base yii commerce module 
+####Common Yii2 Commerce module
 
+Base Yii2 Commerce module contains:
+
+Backend: Vuejs admin application with json REST api
+
+Frontend: classic server side rendering with Vuejs in individual components 
+
+
+* /admin 
+* AdminUser
+* LoginForm
 
 ####Install
 To enable backend routes add to **app/backend/config/main.php**
@@ -11,6 +20,23 @@ To enable backend routes add to **app/backend/config/main.php**
         'class' => yiicom\commerce\backend\Module::class,
     ],
 ],
+
+'components' => [
+    ...
+    'urlManager' => [
+        'enablePrettyUrl' => true,
+        'showScriptName' => false,
+        'enableStrictParsing' => true,
+        'rules' => [
+            '/' => 'admin/main/index',
+            '<module:\w+>/<controller:\w+>/<action:\w+>' => 'admin/main/index',
+            '<module:\w+>/api/v1/<controller:\w+>/<action:[\w-]+>' => '<module>/api/v1/<controller>/<action>',
+        ],
+    ],
+],
+
+
+
 ```
 
 Add module migrations to **app/console/config/main.php**
@@ -29,8 +55,14 @@ php yii migrate
 ```
 
 #### Routes
-admin
-admin/index
+* /admin
+* /admin/index
 
 
+Based on Yz2 and Marketing Solution Loyalty Program 
+extensions for Yii2 Framework 
+
+https://github.com/omnilight/yz2 
+
+Started by Pavel Agalecky
 
