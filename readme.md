@@ -38,18 +38,17 @@ To enable backend routes add to **app/backend/config/main.php**
 
 
 ```
-
-Add module migrations to **app/console/config/main.php**
+Enable module migrations in **console/config/main.php**
 ```php
 'params' => [
     ...
     'yii.migrations' => [
-        '@modules/commerce/migrations',
+        '@yiicom/commerce/migrations',
     ],
 ],
 ```
 
-To create admin users table run yii migrate: 
+Run migrations to create **admin_users** table 
 ```bash
 php yii migrate
 ```
