@@ -1,7 +1,0 @@
-{
-  "name": "yiicom/yii-commerce",
-  "description": "Yii Commerce common bundle",
-  "require": {
-    "php": "^7.1"
-  }
-}
