@@ -2,22 +2,13 @@
 
 use yii\web\View;
 use yii\helpers\Html;
-use yiicom\commerce\backend\assets\CommerceAsset;
-//use modules\pages\backend\assets\CommercePagesAsset;
-//use modules\files\backend\assets\CommerceFilesAsset;
-//use modules\catalog\backend\assets\CommerceCatalogAsset;
 
+// TODO: make default admin layout
 /**
  * @var View $this
  * @var string $content
  */
 
-CommerceAsset::register($this);
-
-// TODO: move to theme?
-//$this->registerAssetBundle(CommercePagesAsset::class);
-//$this->registerAssetBundle(CommerceFilesAsset::class);
-//$this->registerAssetBundle(CommerceCatalogAsset::class);
 ?>
 <?php $this->beginPage(); ?>
 <!DOCTYPE html>
