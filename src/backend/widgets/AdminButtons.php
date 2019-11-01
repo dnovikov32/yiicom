@@ -1,6 +1,6 @@
 <?php
 
-namespace yiicom\commerce\backend\widgets;
+namespace yiicom\backend\widgets;
 
 use Yii;
 use yii\helpers\Url;

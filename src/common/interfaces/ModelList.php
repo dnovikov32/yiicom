@@ -1,6 +1,6 @@
 <?php
 
-namespace yiicom\commerce\common\interfaces;
+namespace yiicom\common\interfaces;
 
 interface ModelList
 {

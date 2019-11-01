@@ -1,8 +1,8 @@
 <?php
 
-namespace yiicom\commerce\backend;
+namespace yiicom\backend;
 
-class Module extends \yiicom\commerce\common\Module
+class Module extends \yiicom\common\Module
 {
     /**
      * Returns menu items for administration panel in the following form:

@@ -17,7 +17,7 @@ To enable backend routes add to **app/backend/config/main.php**
 'modules' => [
     ...
     'admin' => [
-        'class' => yiicom\commerce\backend\Module::class,
+        'class' => yiicom\backend\Module::class,
     ],
 ],
 

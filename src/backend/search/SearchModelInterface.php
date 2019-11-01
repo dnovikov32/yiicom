@@ -1,6 +1,6 @@
 <?php
 
-namespace yiicom\commerce\backend\search;
+namespace yiicom\backend\search;
 
 interface SearchModelInterface
 {

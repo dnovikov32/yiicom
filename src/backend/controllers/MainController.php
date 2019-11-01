@@ -1,8 +1,8 @@
 <?php
 
-namespace yiicom\commerce\backend\controllers;
+namespace yiicom\backend\controllers;
 
-use yiicom\commerce\backend\base\Controller;
+use yiicom\backend\base\Controller;
 
 class MainController extends Controller
 {

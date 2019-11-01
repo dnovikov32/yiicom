@@ -1,6 +1,6 @@
 <?php
 
-namespace yiicom\commerce\backend\assets\ckeditor;
+namespace yiicom\backend\assets\ckeditor;
 
 use yii\web\AssetBundle;
 

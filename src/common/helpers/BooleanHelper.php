@@ -1,6 +1,6 @@
 <?php
 
-namespace yiicom\commerce\common\helpers;
+namespace yiicom\common\helpers;
 
 class BooleanHelper
 {

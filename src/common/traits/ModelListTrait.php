@@ -1,6 +1,6 @@
 <?php
 
-namespace yiicom\commerce\common\traits;
+namespace yiicom\common\traits;
 
 trait ModelListTrait
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace yiicom\commerce\common\base;
+namespace yiicom\common\base;
 
-use yiicom\commerce\common\traits\ModelTrait;
+use yiicom\common\traits\ModelTrait;
 
 class Controller extends \yii\web\Controller
 {

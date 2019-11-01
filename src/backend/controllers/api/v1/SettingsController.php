@@ -1,9 +1,9 @@
 <?php
 
-namespace yiicom\commerce\backend\controllers\api\v1;
+namespace yiicom\backend\controllers\api\v1;
 
-use yiicom\commerce\backend\base\ApiController;
-use yiicom\commerce\common\models\ActiveRecord;
+use yiicom\backend\base\ApiController;
+use yiicom\common\models\ActiveRecord;
 use modules\files\common\models\Preset;
 use modules\pages\common\models\Category;
 

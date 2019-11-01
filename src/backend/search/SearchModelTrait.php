@@ -1,6 +1,6 @@
 <?php
 
-namespace yiicom\commerce\backend\search;
+namespace yiicom\backend\search;
 
 use yii\data\ActiveDataProvider;
 use yii\db\ActiveQuery;
