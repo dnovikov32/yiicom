@@ -10,7 +10,7 @@ use yii\web\AssetBundle;
  */
 class CKEditorAsset extends AssetBundle
 {
-    public $sourcePath = '@yiicom/commerce/backend/assets/ckeditor/assets/ckeditor';
+    public $sourcePath = '@yiicom/backend/assets/ckeditor/assets/ckeditor';
 
     public $js = [
         'ckeditor.js',

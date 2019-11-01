@@ -1,22 +1,23 @@
-####Common Yii2 Commerce module
+####Common Yiicom module
 
-Base Yii2 Commerce module contains:
+Base Yiicom module contains:
 
 Backend: Vuejs admin application with json REST api
 
 Frontend: classic server side rendering with Vuejs in individual components 
 
 
-* /admin 
+* Yiicom admin panel 
 * AdminUser
 * LoginForm
 
 ####Install
-To enable backend routes add to **app/backend/config/main.php**
+**app/backend/config/main.php**
 ```php
+// Enable backend routes
 'modules' => [
     ...
-    'admin' => [
+    'yiicom' => [
         'class' => yiicom\backend\Module::class,
     ],
 ],
@@ -28,22 +29,30 @@ To enable backend routes add to **app/backend/config/main.php**
         'showScriptName' => false,
         'enableStrictParsing' => true,
         'rules' => [
-            '/' => 'admin/main/index',
-            '<module:\w+>/<controller:\w+>/<action:\w+>' => 'admin/main/index',
+            '/' => 'yiicom/main/default',
+            '<module:\w+>/<controller:\w+>/<action:\w+>' => 'admin/main/default',
             '<module:\w+>/api/v1/<controller:\w+>/<action:[\w-]+>' => '<module>/api/v1/<controller>/<action>',
         ],
     ],
+    // Templates override
+    'view' => [
+        'theme' => [
+            'pathMap' => [
+                '@yiicom' => '@app/themes/yiicom',
+            ]
+        ]
+    ],
+
 ],
 
-
-
 ```
-Enable module migrations in **console/config/main.php**
+**app/console/config/main.php**
 ```php
+// Enable module migrations 
 'params' => [
     ...
     'yii.migrations' => [
-        '@yiicom/commerce/migrations',
+        '@yiicom/migrations',
     ],
 ],
 ```
@@ -52,7 +61,3 @@ Run migrations to create **admin_users** table
 ```bash
 php yii migrate
 ```
-
-#### Routes
-* /admin
-* /admin/index

@@ -25,9 +25,9 @@ trait ModelStatusTrait
     public function statusesList()
     {
         return [
-            ModelStatus::STATUS_ACTIVE => Yii::t('commerce', 'Active'),
-            ModelStatus::STATUS_INACTIVE => Yii::t('commerce', 'Inactive'),
-            ModelStatus::STATUS_SOFT_DELETE => Yii::t('commerce', 'Deleted'),
+            ModelStatus::STATUS_ACTIVE => Yii::t('yiicom', 'Active'),
+            ModelStatus::STATUS_INACTIVE => Yii::t('yiicom', 'Inactive'),
+            ModelStatus::STATUS_SOFT_DELETE => Yii::t('yiicom', 'Deleted'),
         ];
     }
 

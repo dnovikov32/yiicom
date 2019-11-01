@@ -73,7 +73,7 @@ class AdminButtons extends Widget
      */
     private function indexButton()
     {
-        $return = Html::a('<i class="fa fa-list-ul"></i> ' . Yii::t('commerce', 'List'),
+        $return = Html::a('<i class="fa fa-list-ul"></i> ' . Yii::t('yiicom', 'List'),
             Url::to('index'),
             ['class' => 'btn btn-xs btn-info admin-btns__btn']
         );
@@ -86,7 +86,7 @@ class AdminButtons extends Widget
      */
     private function createButton()
     {
-        $return = Html::a('<i class="fa fa-plus-square"></i> ' . Yii::t('commerce', 'Create'),
+        $return = Html::a('<i class="fa fa-plus-square"></i> ' . Yii::t('yiicom', 'Create'),
             Url::to('create'),
             ['class' => 'btn btn-xs btn-success admin-btns__btn']
         );
@@ -123,7 +123,7 @@ class AdminButtons extends Widget
             return '';
         }
 
-        return Html::a('<i class="fa fa-trash"></i> ' . Yii::t('commerce', 'Delete'),
+        return Html::a('<i class="fa fa-trash"></i> ' . Yii::t('yiicom', 'Delete'),
             Url::to(['delete', 'id' => $this->model->id]),
             [
                 'class' => 'btn btn-xs btn-danger admin-btns__btn ',
@@ -137,7 +137,7 @@ class AdminButtons extends Widget
      */
     private function saveButton()
     {
-        return Html::submitButton('<i class="fa fa-save"></i> ' . Yii::t('commerce', 'Save'), [
+        return Html::submitButton('<i class="fa fa-save"></i> ' . Yii::t('yiicom', 'Save'), [
             'class' => 'btn btn-xs btn-primary admin-btns__btn'
         ]);
     }

@@ -23,7 +23,7 @@ use yii\helpers\Html;
 <body>
 <?php $this->beginBody(); ?>
 
-    <div id="app"></div>
+    <div id="app">Yiicom default layout/main template</div>
 
 <?php $this->endBody(); ?>
 </body>

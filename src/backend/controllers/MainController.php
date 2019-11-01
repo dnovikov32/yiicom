@@ -9,7 +9,7 @@ class MainController extends Controller
     /**
      * @return string
      */
-    public function actionIndex()
+    public function actionDefault()
     {
         return $this->renderContent('');
     }

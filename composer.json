@@ -1,6 +1,6 @@
 {
   "name": "yiicom/yiicom",
-  "description": "Yii Commerce common bundle",
+  "description": "Yiicom common bundle",
   "keywords": ["yii2", "yiicom", "commerce"],
   "type": "yii2-extension",
   "require": {
