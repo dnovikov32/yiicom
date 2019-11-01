@@ -56,12 +56,3 @@ php yii migrate
 #### Routes
 * /admin
 * /admin/index
-
-
-Based on Yz2 and Marketing Solution Loyalty Program 
-extensions for Yii2 Framework 
-
-https://github.com/omnilight/yz2 
-
-Started by Pavel Agalecky
-
