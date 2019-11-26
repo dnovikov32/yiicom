@@ -48,6 +48,14 @@ Frontend: classic server side rendering with Vuejs in individual components
 ```
 **app/console/config/main.php**
 ```php
+// Enable console commands
+'modules' => [
+    ...
+    'yiicom' => [
+        'class' => \yiicom\console\Module::class,
+    ],
+],
+
 // Enable module migrations 
 'params' => [
     ...
