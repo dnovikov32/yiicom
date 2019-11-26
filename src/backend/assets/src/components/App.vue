@@ -51,7 +51,7 @@
 
         created: function () {
             if (this.$auth.check() && _.isEmpty(this.settings)) {
-                this.$store.dispatch('settings');
+                this.$store.dispatch('fetchSettings');
             }
         },
 

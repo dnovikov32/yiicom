@@ -2,28 +2,30 @@
 
 namespace yiicom\backend\controllers\api\v1;
 
+use Yii;
 use yiicom\backend\base\ApiController;
-use yiicom\common\models\ActiveRecord;
-use modules\files\common\models\Preset;
-use modules\pages\common\models\Category;
+use yiicom\common\Module;
 
 class SettingsController extends ApiController
 {
+    /**
+     * Returns yiicom modules settings for backend application
+     * @return array
+     */
     public function actionIndex()
     {
-        $settings['backendWeb'] = getenv('BACKEND_WEB');
-        $settings['frontendWeb'] = getenv('FRONTEND_WEB');
+        $settings = [];
 
-        $settings['statusesList'] = (new ActiveRecord)->statusesList();
+        foreach (Yii::$app->getModules() as $id => $module) {
+            if (is_array($module)) {
+                $module = Yii::$app->getModule($id);
+            }
 
-        // TODO: move to pages module
-        $settings['pages'] = [];
-        $settings['pages']['categories'] = (new Category)->getList();
-
-        // TODO: move to file module
-        $settings['presets'] = [];
-        $settings['presets']['default'] = Preset::findOne(['isDefault' => true]);
-        $settings['presets']['actions'] = (new Preset)->actionsList();
+            /* @var Module $module */
+            if ($module instanceof Module && method_exists($module, 'settings')) {
+                $settings = array_merge($settings, $module->settings());
+            }
+        }
 
         return $settings;
     }

@@ -2,37 +2,21 @@
 
 namespace yiicom\backend;
 
+use yiicom\common\models\ActiveRecord;
+
 class Module extends \yiicom\common\Module
 {
     /**
-     * Returns menu items for administration panel in the following form:
-     * ~~~
-     * [
-     *     'label' => 'Group Title',
-     *     'iconv' => 'icon',
-     *     'items' => [
-     *         [
-     *             'route' => 'absolute/route', // Route (or URL if string)
-     *             'authItem' => 'someItem', // Will be used to determine whether user has access to the menu
-     *                                       // item. Otherwise information from the route will be used
-     *             'label' => 'My title',
-     *             'icon' => 'icon',
-     *         ],
-     *         [
-     *              'class' => '\yz\module\AdminMenuItem', // Points to class that will return above array
-     *              'parameter1' => '...'
-     *         ]
-     *     ],
-     * ]
-     * ~~~
+     * Return module settings for backend vue application
      * @return array
      */
-    public function getAdminMenu()
+    public function settings()
     {
-        return [
-            'label' => 'Главная',
-            'url' => ['/admin/main/index'],
-            'icon' => 'nav-icon fa fa-chart-bar',
-        ];
+        $settings['backendWeb'] = getenv('BACKEND_WEB');
+        $settings['frontendWeb'] = getenv('FRONTEND_WEB');
+
+        $settings['statusesList'] = (new ActiveRecord)->statusesList();
+
+        return $settings;
     }
 }

@@ -65,7 +65,7 @@ export default new Vuex.Store({
             });
         },
 
-        settings ({state, commit, rootState}) {
+        fetchSettings ({state, commit, rootState}) {
             return Vue.axios.get('/admin/api/v1/settings/index')
                 .then(
                     response => commit('FETCH_SETTINGS_SUCCESS', response.data),
