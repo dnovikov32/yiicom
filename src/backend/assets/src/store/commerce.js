@@ -31,13 +31,13 @@ export default new Vuex.Store({
     },
 
     mutations: {
-        ['SET_LOADER'] (state, value) {
+        SET_LOADER (state, value) {
             state.isLoading = value;
         },
-        ['SET_ERRORS'] (state, errors) {
+        SET_ERRORS (state, errors) {
             state.errors = errors;
         },
-        ['FETCH_SETTINGS_SUCCESS'] (state, data) {
+        FETCH_SETTINGS_SUCCESS (state, data) {
             state.settings = data;
         },
     },
@@ -71,9 +71,7 @@ export default new Vuex.Store({
                     response => commit('FETCH_SETTINGS_SUCCESS', response.data),
                     error => {}
                 );
-        },
-
-
+        }
     }
 
 });
