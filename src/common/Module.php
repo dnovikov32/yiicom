@@ -7,20 +7,14 @@ use yii\i18n\PhpMessageSource;
 
 class Module extends \yii\base\Module
 {
-
     public function init()
     {
         parent::init();
-        $this->registerTranslations();
-    }
 
-    public function registerTranslations()
-    {
         Yii::$app->i18n->translations['yiicom'] = [
             'class' => PhpMessageSource::class,
             'basePath' => '@yiicom/common/messages',
             'sourceLanguage' => 'en-US',
         ];
     }
-
 }
