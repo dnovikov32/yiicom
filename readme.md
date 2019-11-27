@@ -30,8 +30,8 @@ Frontend: classic server side rendering with Vuejs in individual components
         'enableStrictParsing' => true,
         'rules' => [
             '/' => 'yiicom/main/default',
-            '<module:\w+>/<controller:\w+>/<action:\w+>' => 'admin/main/default',
             '<module:\w+>/api/v1/<controller:\w+>/<action:[\w-]+>' => '<module>/api/v1/<controller>/<action>',
+            '<controller:\w+>/<action:\w+>' => '<controller>/<action>', // for elfinder route
         ],
     ],
     // Templates override
@@ -40,6 +40,22 @@ Frontend: classic server side rendering with Vuejs in individual components
             'pathMap' => [
                 '@yiicom' => '@app/themes/yiicom',
             ]
+        ]
+    ],
+
+    // Enable Elfinder
+    'controllerMap' => [
+        'elfinder' => [
+            'class' => \mihaildev\elfinder\Controller::class,
+            'access' => ['@'],
+            'roots' => [
+                [
+                    'baseUrl' => '@backendWeb',
+                    'basePath' => '@backendWebroot',
+                    'path' => 'storage/uploads',
+                    'name' => 'Файлы'
+                ]
+            ],
         ]
     ],
 
