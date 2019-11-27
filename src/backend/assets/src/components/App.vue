@@ -51,16 +51,16 @@
 
         created: function () {
             if (this.$auth.check() && _.isEmpty(this.settings)) {
-                this.$store.dispatch('fetchSettings');
+                this.$store.dispatch('commerce/fetchSettings');
             }
         },
 
         computed: {
             isLoading () {
-                return this.$store.getters['isLoading'];
+                return this.$store.getters['commerce/isLoading'];
             },
             settings () {
-                return this.$store.getters['settings'];
+                return this.$store.getters['commerce/settings'];
             }
         }
 

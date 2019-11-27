@@ -60,10 +60,10 @@
 
         computed: {
             isLoading: function () {
-                return this.$store.getters['isLoading'];
+                return this.$store.getters['commerce/isLoading'];
             },
             hasError: function () {
-                return this.$store.getters['hasError'];
+                return this.$store.getters['commerce/hasError'];
             }
         },
 

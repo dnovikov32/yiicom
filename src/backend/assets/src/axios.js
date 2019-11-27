@@ -15,14 +15,14 @@ axios.interceptors.request.use(
         // TODO: loook on
         // 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
 
-        window.App.$store.dispatch('loading', true);
-        window.App.$store.dispatch('failing', []);
+        window.App.$store.dispatch('commerce/loading', true);
+        window.App.$store.dispatch('commerce/failing', []);
 
         return config;
     },
     error => {
-        window.App.$store.dispatch('loading', false);
-        window.App.$store.dispatch('failing', error.response.data);
+        window.App.$store.dispatch('commerce/loading', false);
+        window.App.$store.dispatch('commerce/failing', error.response.data);
 
         return Promise.reject(error);
     }
@@ -30,8 +30,8 @@ axios.interceptors.request.use(
 
 axios.interceptors.response.use(
     response => {
-        window.App.$store.dispatch('loading', false);
-        window.App.$store.dispatch('failing', []);
+        window.App.$store.dispatch('commerce/loading', false);
+        window.App.$store.dispatch('commerce/failing', []);
 
         return response;
     },
@@ -42,8 +42,8 @@ axios.interceptors.response.use(
             });
         }
 
-        window.App.$store.dispatch('loading', false);
-        window.App.$store.dispatch('failing', error.response.data);
+        window.App.$store.dispatch('commerce/loading', false);
+        window.App.$store.dispatch('commerce/failing', error.response.data);
 
         return Promise.reject(error);
     }

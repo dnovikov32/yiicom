@@ -9,12 +9,12 @@
         </li>
 
         <li class="nav-item">
-            <router-link to="/pages/page/index" class="nav-link dropdown-toggle" :class="isActive('pages') ? 'active' : ''">
+            <router-link to="/content/page/index" class="nav-link dropdown-toggle" :class="isActive('content') ? 'active' : ''">
                 <i class="nav-icon fa fa-file"></i>Страницы
             </router-link>
-            <div class="dropdown-menu" :class="isActive('pages') ? 'show' : ''">
-                <router-link to="/pages/page/index" class="dropdown-item"><i class="nav-icon fa fa-file"></i>Страницы</router-link>
-                <router-link to="/pages/category/index" class="dropdown-item"><i class="nav-icon fa fa-list"></i>Категории</router-link>
+            <div class="dropdown-menu" :class="isActive('content') ? 'show' : ''">
+                <router-link to="/content/page/index" class="dropdown-item"><i class="nav-icon fa fa-file"></i>Страницы</router-link>
+                <router-link to="/content/category/index" class="dropdown-item"><i class="nav-icon fa fa-list"></i>Категории</router-link>
             </div>
         </li>
 

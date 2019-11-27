@@ -81,7 +81,7 @@
 
         computed: {
             settings () {
-                return this.$store.getters['settings'];
+                return this.$store.getters['commerce/settings'];
             },
             module () {
                 return this.parts[0];
