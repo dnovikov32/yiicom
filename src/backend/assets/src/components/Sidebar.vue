@@ -18,7 +18,7 @@
                      class="dropdown-item"
                      :class="isActive(subitem) ? 'active' : ''"
                 >
-                    <i class="nav-icon" :class="item.icon"></i>{{ subitem.label }}
+                    <i class="nav-icon" :class="subitem.icon"></i>{{ subitem.label }}
                 </router-link>
             </div>
 
