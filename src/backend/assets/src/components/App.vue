@@ -56,11 +56,22 @@
         },
 
         computed: {
+            isDev () {
+                return this.$store.getters['commerce/isDev'];
+            },
             isLoading () {
                 return this.$store.getters['commerce/isLoading'];
             },
             settings () {
                 return this.$store.getters['commerce/settings'];
+            }
+        },
+
+        watch: {
+            'settings' () {
+                if (this.isDev) {
+                    console.log('settings', this.settings);
+                }
             }
         }
 
