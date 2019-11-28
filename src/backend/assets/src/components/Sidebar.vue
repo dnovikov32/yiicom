@@ -2,7 +2,7 @@
 
     <b-nav class="sidebar navbar-dark bg-dark">
 
-        <li class="nav-item" v-for="(item, index) in adminMenu">
+        <li class="nav-item" v-for="(item, index) in adminMenu" :key="index">
 
             <router-link :to="item.url"
                  class="nav-link"
@@ -13,7 +13,7 @@
             </router-link>
 
             <div v-if="item.items" class="dropdown-menu" :class="isActive(item) ? 'show' : ''">
-                <router-link v-for="(subitem, subindex) in item.items"
+                <router-link v-for="(subitem, subindex) in item.items" :key="subindex"
                      :to="subitem.url"
                      class="dropdown-item"
                      :class="isActive(subitem) ? 'active' : ''"
