@@ -11,6 +11,7 @@ export default {
 
     getters: {
         isDev (state) {
+            //TODO: add env variable
             return true;
         },
         isLoading (state) {

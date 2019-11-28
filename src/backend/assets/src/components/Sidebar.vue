@@ -2,39 +2,26 @@
 
     <b-nav class="sidebar navbar-dark bg-dark">
 
-        <li class="nav-item">
-            <router-link :to="{ path: '/' }" exact class="nav-link">
-                <i class="nav-icon fa fa-chart-bar"></i>Главная
-            </router-link>
-        </li>
+        <li class="nav-item" v-for="(item, index) in adminMenu">
 
-        <li class="nav-item">
-            <router-link to="/content/page/index" class="nav-link dropdown-toggle" :class="isActive('content') ? 'active' : ''">
-                <i class="nav-icon fa fa-file"></i>Страницы
+            <router-link :to="item.url"
+                 class="nav-link"
+                 :class="(isActive(item) ? 'active' : '') + ' ' +  (item.items ? 'dropdown-toggle' : '')"
+                 :exact="item.url == '/'"
+            >
+                <i class="nav-icon" :class="item.icon"></i>{{ item.label }}
             </router-link>
-            <div class="dropdown-menu" :class="isActive('content') ? 'show' : ''">
-                <router-link to="/content/page/index" class="dropdown-item"><i class="nav-icon fa fa-file"></i>Страницы</router-link>
-                <router-link to="/content/category/index" class="dropdown-item"><i class="nav-icon fa fa-list"></i>Категории</router-link>
-            </div>
-        </li>
 
-        <li class="nav-item">
-            <router-link to="/catalog/category/index" class="nav-link dropdown-toggle" :class="isActive('catalog') ? 'active' : ''">
-                <i class="nav-icon fa fa-sitemap"></i>Каталог
-            </router-link>
-            <div class="dropdown-menu" :class="isActive('catalog') ? 'show' : ''">
-                <router-link to="/catalog/category/index" class="dropdown-item"><i class="nav-icon fa fa-list"></i>Категории</router-link>
+            <div v-if="item.items" class="dropdown-menu" :class="isActive(item) ? 'show' : ''">
+                <router-link v-for="(subitem, subindex) in item.items"
+                     :to="subitem.url"
+                     class="dropdown-item"
+                     :class="isActive(subitem) ? 'active' : ''"
+                >
+                    <i class="nav-icon" :class="item.icon"></i>{{ subitem.label }}
+                </router-link>
             </div>
-        </li>
 
-        <li class="nav-item">
-            <router-link to="/files/file/index" class="nav-link dropdown-toggle" :class="isActive('files') ? 'active' : ''">
-                <i class="nav-icon fa fa-file"></i>Файлы
-            </router-link>
-            <div class="dropdown-menu" :class="isActive('files') ? 'show' : ''">
-                <router-link to="/files/file/index" class="dropdown-item"><i class="nav-icon fa fa-file"></i>Файлы</router-link>
-                <router-link to="/files/preset/index" class="dropdown-item"><i class="nav-icon fa fa-list"></i>Пресеты</router-link>
-            </div>
         </li>
 
     </b-nav>
@@ -44,12 +31,62 @@
 <script>
     export default {
 
-        methods: {
-            isActive (module) {
-                let parts = this.$route.path.split('/');
-                parts = parts.filter(Boolean);
+        data () {
+            return {
+                parts: []
+            };
+        },
 
-                return module === parts[0];
+        computed: {
+            settings () {
+                return this.$store.getters['commerce/settings'];
+            },
+            adminMenu () {
+                return _.isEmpty(this.settings) ? {} : this.settings.adminMenu;
+            },
+            module () {
+                return this.parts[0];
+            },
+            controller () {
+                return this.parts[1];
+            },
+            action () {
+                return this.parts[2];
+            },
+            route () {
+                return `/${this.module}/${this.controller}`;
+            },
+        },
+
+        // TODO: route parts code repeats adminButtons component
+        created: function () {
+            this.setParts();
+        },
+
+        watch: {
+            '$route': function () {
+                this.setParts();
+            }
+        },
+
+        methods: {
+            setParts () {
+                let parts = this.$route.path.split('/');
+                this.parts = parts.filter(Boolean);
+            },
+
+            isActive (item) {
+                let parts = item.url.split('/').filter(Boolean);
+                let module = parts[0];
+                let controller = parts[1];
+                let action = parts[2];
+                let route = `/${module}/${controller}`;
+
+                if (item.items) {
+                    return module === this.module;
+                }
+
+                return route === this.route;
             }
         }
     }

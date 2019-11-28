@@ -8,8 +8,7 @@ use yiicom\common\models\ActiveRecord;
 class Module extends \yiicom\common\Module
 {
     /**
-     * Return module settings for backend vue application
-     * @return array
+     * @inheritDoc
      */
     public function settings()
     {
@@ -22,5 +21,17 @@ class Module extends \yiicom\common\Module
 
 
         return $settings;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function adminMenu()
+    {
+        return [
+            'label' => 'Главная',
+            'icon' => 'fa fa-chart-bar',
+            'url' => '/',
+        ];
     }
 }

@@ -17,4 +17,38 @@ class Module extends \yii\base\Module
             'sourceLanguage' => 'en-US',
         ];
     }
+
+    /**
+     * Return module settings for backend vue application
+     * @return array
+     */
+    public function settings()
+    {
+        return [];
+    }
+
+    /**
+     * Returns menu items for administration panel in the following form:
+     * ~~~
+     * [
+     *     'label' => 'Group Title',
+     *     'icon' => 'icon',
+     *'     url' => '/admin/main/index',
+     *     'items' => [
+     *         [
+     *             'label' => 'Item title',
+     *             'icon' => 'icon',
+     *             'url' => '/relative/route',
+     *         ],
+     *     ],
+     * ]
+     * ~~~
+     * @return array
+     */
+    public function adminMenu()
+    {
+        return [];
+    }
+    
+    
 }

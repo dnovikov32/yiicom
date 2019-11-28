@@ -15,6 +15,7 @@ class SettingsController extends ApiController
     public function actionIndex()
     {
         $settings = [];
+        $adminMenu = [];
 
         foreach (Yii::$app->getModules() as $id => $module) {
             if (is_array($module)) {
@@ -22,10 +23,23 @@ class SettingsController extends ApiController
             }
 
             /* @var Module $module */
-            if ($module instanceof Module && method_exists($module, 'settings')) {
+            if (! $module instanceof Module) {
+                continue;
+            }
+
+            if (method_exists($module, 'settings')) {
                 $settings = array_merge($settings, $module->settings());
             }
+
+            if (method_exists($module, 'adminMenu')) {
+                $moduleAdminMenu = $module->adminMenu();
+                if ($moduleAdminMenu) {
+                    $adminMenu = array_merge($adminMenu, [$id => $moduleAdminMenu]);
+                }
+            }
         }
+
+        $settings['adminMenu'] = $adminMenu;
 
         return $settings;
     }
