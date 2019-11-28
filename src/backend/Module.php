@@ -2,6 +2,7 @@
 
 namespace yiicom\backend;
 
+use Yii;
 use yiicom\common\models\ActiveRecord;
 
 class Module extends \yiicom\common\Module
@@ -12,10 +13,13 @@ class Module extends \yiicom\common\Module
      */
     public function settings()
     {
-        $settings['backendWeb'] = getenv('BACKEND_WEB');
-        $settings['frontendWeb'] = getenv('FRONTEND_WEB');
+        $settings = [
+            'id' => Yii::$app->id,
+            'backendWeb' => getenv('BACKEND_WEB'),
+            'frontendWeb' => getenv('FRONTEND_WEB'),
+            'statusesList' => (new ActiveRecord)->statusesList(),
+        ];
 
-        $settings['statusesList'] = (new ActiveRecord)->statusesList();
 
         return $settings;
     }

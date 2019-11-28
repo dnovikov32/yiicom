@@ -6,6 +6,7 @@ use yii\web\AssetBundle;
 
 /**
  * @inheritdoc
+ * TODO: not necessary?
  */
 class VueAsset extends AssetBundle
 {
