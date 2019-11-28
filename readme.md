@@ -6,10 +6,26 @@ Backend: Vuejs admin application with json REST api
 
 Frontend: classic server side rendering with Vuejs in individual components 
 
+**Components**
+- yiicom
+    - Admin panel
+    - LogingForm
+    - AdminUser
 
-* Yiicom admin panel 
-* AdminUser
-* LoginForm
+- yiicom-content
+    - Page
+    - Category
+    - Url
+    
+- yiicom-files
+
+- yiicom-catalog
+    - Category
+    - Product
+    - ProductCategory
+
+
+
 
 ####Install
 **app/backend/config/main.php**
