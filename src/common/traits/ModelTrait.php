@@ -19,8 +19,8 @@ trait ModelTrait
         /* @var ActiveRecord $class */
         $model = $class::findOne(['id' => $id]);
 
-        if (null === $model) {
-            throw new NotFoundHttpException(Yii::t("app", "Page not found"));
+        if (! $model) {
+            throw new NotFoundHttpException(Yii::t('app', 'Page not found'));
         }
 
         return $model;
@@ -34,16 +34,16 @@ trait ModelTrait
      * @return ActiveRecord
      * @throws NotFoundHttpException
      */
-    public function findOrNewModel(string $class, int $id = null, bool $new = false)
+    public function findOrNewModel(string $class, int $id = null, bool $new = true)
     {
         /* @var ActiveRecord $class */
         /* @var ActiveRecord $model */
 
         $model = $class::findOne(['id' => $id]);
 
-        if (null === $model) {
-            if (false === $new) {
-                throw new NotFoundHttpException(Yii::t("app", "Page not found"));
+        if (! $model) {
+            if (! $new) {
+                throw new NotFoundHttpException(Yii::t('app', 'Page not found'));
             }
 
             $model = new $class;
