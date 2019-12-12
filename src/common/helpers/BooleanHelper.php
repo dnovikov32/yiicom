@@ -4,11 +4,25 @@ namespace yiicom\common\helpers;
 
 class BooleanHelper
 {
-    public static function getList()
+    const STATUS_YES = true;
+    const STATUS_NO = false;
+
+    /**
+     * @return array
+     */
+    public function statusesList()
     {
         return [
-            1 => 'Да',
-            0 => 'Нет'
+            static::STATUS_YES => 'Да',
+            static::STATUS_NO => 'Нет'
         ];
+    }
+
+    /**
+     * @return array
+     */
+    public function statusesOptions()
+    {
+        return array_keys($this->statusesList());
     }
 }
