@@ -1,0 +1,36 @@
+@function z($key) {
+    @if map-has-key($z-indexes, $key) {
+        @return map-get($z-indexes, $key);
+    }
+
+    @warn "Unknown `#{$key}` in $z-indexes.";
+
+    @return null;
+}
+
+// px to rem
+@function rem($pixels, $context: $mainFontSize) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+    @return $pixels / $context * 1rem;
+}
+
+@mixin transition($property: all, $duration: 0.1s, $animation: ease-in-out) {
+    transition: $property $duration $animation;
+}
+
+@mixin size($width,$height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin placeholder {
+    ::-webkit-input-placeholder {@content}
+    :-moz-placeholder           {@content}
+    ::-moz-placeholder          {@content}
+    :-ms-input-placeholder      {@content}
+}
