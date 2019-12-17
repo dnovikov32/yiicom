@@ -165,6 +165,13 @@ class ActionColumn extends Column
                 switch ($name) {
                     case 'view':
                         $title = Yii::t('yii', 'View');
+
+                        $alias = $model->url->alias ?? null;
+                        if ($alias !== null) {
+                            $url = \Yii::getAlias("@frontendWeb/{$alias}");
+                            $additionalOptions['target'] = 'blank';
+                        }
+
                         break;
                     case 'update':
                         $title = Yii::t('yii', 'Update');
@@ -175,12 +182,15 @@ class ActionColumn extends Column
                     default:
                         $title = ucfirst($name);
                 }
+
                 $options = array_merge([
                     'title' => $title,
                     'aria-label' => $title,
                     'data-pjax' => '0',
                 ], $additionalOptions, $this->buttonOptions);
+
                 $icon = Html::tag('span', '', ['class' => "fa fa-$iconName"]);
+
                 return Html::a($icon, $url, $options);
             };
         }
