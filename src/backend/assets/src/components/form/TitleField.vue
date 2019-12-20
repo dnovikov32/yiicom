@@ -46,19 +46,19 @@
 
                     let $name = $('input[id="name"]');
 
-                    $name.on('keyup', function() {
+                    $name.on('keyup.titleField', function() {
                         self.model.title = self.model.name;
                     });
 
                     if (isComponentCreation) {
-                        $name.on('focus', function () {
+                        $name.on('focus.titleField', function () {
                             if (self.model.title) {
-                                $name.unbind('keyup');
+                                $name.unbind('keyup.titleField');
                             }
                         });
 
-                        $name.on('blur', function () {
-                            $name.unbind('keyup');
+                        $name.on('blur.titleField', function () {
+                            $name.unbind('keyup.titleField');
                         });
                     }
                 });
