@@ -13,7 +13,7 @@ CKEDITOR.editorConfig = function( config ) {
         { name: 'tools', groups: [ 'tools' ] },
         { name: 'document', groups: [ 'mode'] }
     ];
-    config.removeButtons = 'Subscript,Superscript,Scayt,HorizontalRule,Blockquote,Indent,Outdent,Styles,Font,Format,Flash,Smiley,PageBreak,Iframe,ShowBlocks,Save,Print,Preview,NewPage';
+    config.removeButtons = 'Subscript,Superscript,Scayt,HorizontalRule,Blockquote,Indent,Outdent,Styles,Font,Flash,Smiley,PageBreak,Iframe,ShowBlocks,Save,Print,Preview,NewPage';
 
     config.height = 300;
     config.language = 'en';
@@ -21,7 +21,7 @@ CKEDITOR.editorConfig = function( config ) {
     config.shiftEnterMode = CKEDITOR.ENTER_BR;
     config.entities = false;
     config.allowedContent = true;
-    config.format_tags = 'p;h1;h2;h3;pre;div';
+    config.format_tags = 'p;h1;h2;h3;h4;h5;h6;pre;div';
     config.extraAllowedContent = 'div';
     config.filebrowserBrowseUrl = '/elfinder/manager';
     config.filebrowserImageBrowseUrl = '/elfinder/manager?filter=image';
