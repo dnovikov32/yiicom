@@ -8,6 +8,13 @@ namespace yiicom\common\interfaces;
 interface ModelRelations
 {
     /**
+     * Returns class name.
+     * Is used for PageUrl modelClass field value and Vue backend application
+     * @return string
+     */
+    public function getModelClass();
+
+    /**
      * @return array
      */
     public function relations();

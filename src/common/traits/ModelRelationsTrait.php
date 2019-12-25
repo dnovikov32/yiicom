@@ -8,6 +8,14 @@ use yii\helpers\ArrayHelper;
 trait ModelRelationsTrait
 {
     /**
+     * @return string
+     */
+    public function getModelClass()
+    {
+        return static::class;
+    }
+
+    /**
      * Returns a list of relations that this model has.
      * Classes who use this trait may override this method to specify the relations they want to use.
      *
