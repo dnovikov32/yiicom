@@ -27,7 +27,7 @@ class AdminUser extends \yii\db\ActiveRecord implements ModelStatus, IdentityInt
 
 	public static function tableName()
 	{
-		return '{{%admin_users}}';
+		return '{{%commerce_admin_user}}';
 	}
 
     /**

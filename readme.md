@@ -97,7 +97,7 @@ Frontend: classic server side rendering with Vuejs in individual components
 ],
 ```
 
-Run migrations to create **admin_users** table 
+Run migrations to create **commerce_admin_user** table 
 ```bash
 php yii migrate
 ```
