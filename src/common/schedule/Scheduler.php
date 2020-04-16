@@ -37,18 +37,22 @@ class Scheduler
     /**
      * @param Schedule $schedule
      * @return bool
-     * @throws \ReflectionException
      */
     public function runTask(Schedule $schedule): bool
     {
         $schedule->updateAttributes(['status' => ModelStatus::STATUS_PROCESS]);
-
-        $task = $this->createScheduleTask($schedule);
-        $result = $task->run($schedule);
-
         $schedule->try++;
-        $schedule->result = $result;
-        $schedule->status = $result ? ModelStatus::STATUS_COMPLETE : ModelStatus::STATUS_ERROR;
+
+        try {
+            $task = $this->createScheduleTask($schedule);
+            $result = $task->run($schedule);
+
+            $schedule->result = $result;
+            $schedule->status = $result ? ModelStatus::STATUS_COMPLETE : ModelStatus::STATUS_ERROR;
+        } catch (\Exception $e) {
+            $schedule->result = $e->getMessage() ."\n" . $e->getTraceAsString();
+            $schedule->status = ModelStatus::STATUS_ERROR;
+        }
 
         return $schedule->save();
     }

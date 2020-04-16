@@ -98,7 +98,13 @@ Something taken from Yz2 extensions https://github.com/omnilight/yz2-admin
 ],
 ```
 
-Run migrations to create **commerce_admin_user** table 
+**app/console/config/schedule.php**
+```php
+// Add command to runs yiicom schedule tasks
+$schedule->command('yiicom/schedule/run')->everyMinute();
+```
+
+Run migrations to create **commerce_admin_user** and **commerce_schedule** tables 
 ```bash
 php yii migrate
 ```
