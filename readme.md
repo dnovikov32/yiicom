@@ -1,10 +1,11 @@
 ####Common Yiicom module
 
 Base Yiicom module contains:
+- Backend: Vuejs admin application with json REST api
+- Frontend: classic server side rendering with Vuejs in individual components 
 
-Backend: Vuejs admin application with json REST api
+Something taken from Yz2 extensions https://github.com/omnilight/yz2-admin
 
-Frontend: classic server side rendering with Vuejs in individual components 
 
 **Components**
 - yiicom
