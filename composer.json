@@ -12,6 +12,7 @@
     "yiisoft/yii2-swiftmailer": "2.0.7",
     "dmstr/yii2-migrate-command": "^0.3.0",
     "creocoder/yii2-nested-sets": "^0.9.0",
+    "omnilight/yii2-scheduling": "^1.0.0",
     "kartik-v/yii2-sortable": "^1.0.0",
     "kartik-v/yii2-tabs-x": "^1.0.0",
     "kartik-v/yii2-widget-select2": "^2.0.0",
