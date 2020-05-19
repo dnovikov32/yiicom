@@ -35,4 +35,6 @@ return [
     'Updated At' => 'Дата обновления',
     'Main page' => 'Главная страница',
     'Value' => 'Значение',
+    'Model class' => 'Класс модели',
+    'Relation model class' => 'Класс связанной модели'
 ];
