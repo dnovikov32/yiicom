@@ -8,6 +8,8 @@ class Controller extends \yiicom\common\base\Controller
 {
 	public function init()
 	{
+        parent::init();
+        
 		$this->layout = '@yiicom/backend/views/layouts/main';
 	}
 
