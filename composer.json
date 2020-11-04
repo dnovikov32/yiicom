@@ -1,8 +1,14 @@
 {
   "name": "yiicom/yiicom",
   "description": "Yiicom common bundle",
-  "keywords": ["yii2", "yiicom", "commerce"],
+  "keywords": ["yii2", "yiicom", "commerce", "cms"],
   "type": "yii2-extension",
+  "authors": [
+    {
+      "name": "Dmitriy Novikov",
+      "email": "dn@t1000.su"
+    }
+  ],
   "require": {
     "php": ">=7.1.0",
     "ext-mbstring": "*",
